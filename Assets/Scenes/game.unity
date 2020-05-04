@@ -215,10 +215,9 @@ GameObject:
   - component: {fileID: 583707789}
   - component: {fileID: 583707788}
   - component: {fileID: 583707787}
-  - component: {fileID: 583707790}
   - component: {fileID: 583707791}
   m_Layer: 0
-  m_Name: wall
+  m_Name: WallLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -314,34 +313,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &583707790
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 583707786}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 4
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 583707791}
-          m_MethodName: prueba
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!114 &583707791
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -354,8 +325,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72b0851df8633e74e87a001c0390ea24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
-  bla: {fileID: 0}
 --- !u!1 &759076839
 GameObject:
   m_ObjectHideFlags: 0
@@ -383,13 +352,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 759076839}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c9c5834d65cce8f45830d18a077d44aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 56
-  wall: {fileID: 0}
 --- !u!212 &759076841
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -428,9 +396,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: 51429168fdeecb141993c56ec419c302, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -514,7 +482,7 @@ GameObject:
   - component: {fileID: 1964438157}
   - component: {fileID: 1964438160}
   m_Layer: 0
-  m_Name: wall (1)
+  m_Name: WallRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -619,22 +587,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 1964438156}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Script: {fileID: 11500000, guid: 72b0851df8633e74e87a001c0390ea24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 9
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 11500000, guid: c9c5834d65cce8f45830d18a077d44aa, type: 3}
-          m_MethodName: set_name
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: Update
-            m_BoolArgument: 0
-          m_CallState: 2

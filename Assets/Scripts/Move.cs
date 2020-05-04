@@ -10,20 +10,16 @@ public class Move : MonoBehaviour
     private Vector3 TargetPosition;
     private Vector3 TargetPositionWall;
     private bool MoveOn = false;
-    public GameObject wall;
-
-    void Start()
-    {
-
-    }
+    private Wall wall;
     
     void Update()
     {
-        
+        /*
          if (Input.GetMouseButton(0))
          {
              SetTargetPosition();
          }
+         */
         if (MoveOn)
         {
             MoveP();
@@ -31,13 +27,18 @@ public class Move : MonoBehaviour
         
     }
 
-    public void SetTargetPosition()
+    public void SetTargetPosition(Wall dest)
     {
-        TargetPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        TargetPosition.z = transform.position.z;
+        if(!dest.Equals(wall)) {
 
-        MoveOn = true;
-        Debug.Log("hit");
+            TargetPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            TargetPosition.z = transform.position.z;
+
+            MoveOn = true;
+            wall = dest;
+
+        }
+
     }
     
     public void MoveP()
