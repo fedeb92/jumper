@@ -10,7 +10,8 @@ public class Move : MonoBehaviour
     private Vector3 TargetPosition;
     private Vector3 TargetPositionWall;
     private bool MoveOn = false;
-    private Wall wall;
+    public Wall wall;
+    public float maxDistance = 7f;
     
     void Update()
     {
@@ -45,7 +46,18 @@ public class Move : MonoBehaviour
         }
     }
     
+    public bool IsReachable(Wall w) {        
+        return Vector3.Distance(w.transform.position, transform.position) < maxDistance;
+    }
+    public bool IsAllowed(Wall w) {
 
+        if(wall!=null && wall.forbidden.Length > 0) {
+            foreach (GameObject forbidden in wall.forbidden) {
+                if (w.gameObject.Equals(forbidden)) return false;
+            }
+        }        
+        return true;
+    }
 
 }
 

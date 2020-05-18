@@ -7,7 +7,10 @@ public class Wall : MonoBehaviour
 
 {
     // Start is called before the first frame update
+
+    public GameObject[] forbidden;
     private Move move;
+
     private void Start() {
 
         move = GameObject.FindObjectOfType<Move>();
@@ -17,7 +20,9 @@ public class Wall : MonoBehaviour
 
     private void OnMouseDown() {
 
-        move.SetTargetPosition(this);
-
+        if (move.IsAllowed(this) && move.IsReachable(this)) {
+            move.SetTargetPosition(this);
+        }
+        
     }
 }
