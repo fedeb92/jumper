@@ -14,12 +14,7 @@ public class Move : MonoBehaviour
     
     void Update()
     {
-        /*
-         if (Input.GetMouseButton(0))
-         {
-             SetTargetPosition();
-         }
-         */
+       
         if (MoveOn)
         {
             MoveP();
