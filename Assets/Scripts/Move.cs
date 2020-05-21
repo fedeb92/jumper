@@ -1,7 +1,9 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Move : MonoBehaviour
 {
@@ -20,7 +22,17 @@ public class Move : MonoBehaviour
     //line renderer
     public LineRenderer lr;
     public LineRenderer lr2;
-   
+
+    private void Start()
+    {
+        if (GameObject.Find("GameController").GetComponent<Vida>().vida == 0)
+        {
+            
+            SceneManager.LoadScene("menu");
+            GameObject.Find("GameController").GetComponent<Vida>().vida = 3;
+        }
+           
+    }
     void Update()
     {
        
@@ -47,6 +59,7 @@ public class Move : MonoBehaviour
         }
 
         
+
     }
 
     public void SetTargetPosition(Wall dest)
@@ -84,6 +97,8 @@ public class Move : MonoBehaviour
         }        
         return true;
     }
+
+    
 
     void Flip(float rot)
     {

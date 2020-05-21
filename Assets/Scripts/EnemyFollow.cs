@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class EnemyFollow : MonoBehaviour
 {
-    // Start is called before the first frame update
+    
     public Transform player;
     public float moveSpeed = 5f;
     private Rigidbody2D rb;
@@ -13,9 +13,9 @@ public class EnemyFollow : MonoBehaviour
     void Start()
     {
         rb = this.GetComponent<Rigidbody2D>();
+        player = GameObject.Find("Player").GetComponent(typeof(Transform)) as Transform;
     }
 
-    // Update is called once per frame
     void Update()
     {
         Vector3 direction = player.position - transform.position;
@@ -32,4 +32,6 @@ public class EnemyFollow : MonoBehaviour
     {
         rb.MovePosition((Vector2)transform.position + (direction * moveSpeed* Time.deltaTime));
     }
+
+   
 }

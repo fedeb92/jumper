@@ -63,9 +63,23 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Bullet.cs" />
+    <Compile Include="Assets\Scripts\BulletDestroyer.cs" />
+    <Compile Include="Assets\Scripts\BulletShoot.cs" />
+    <Compile Include="Assets\Scripts\ButtonController.cs" />
+    <Compile Include="Assets\Scripts\CamaraFollow.cs" />
+    <Compile Include="Assets\Scripts\CoinTouch.cs" />
+    <Compile Include="Assets\Scripts\CollisonBullet.cs" />
     <Compile Include="Assets\Scripts\EnemyFollow.cs" />
+    <Compile Include="Assets\Scripts\FinalPlatafform.cs" />
     <Compile Include="Assets\Scripts\LineIndicator.cs" />
     <Compile Include="Assets\Scripts\Move.cs" />
+    <Compile Include="Assets\Scripts\Reset.cs" />
+    <Compile Include="Assets\Scripts\ScoreShow.cs" />
+    <Compile Include="Assets\Scripts\SpawnEnemies.cs" />
+    <Compile Include="Assets\Scripts\SpawnEnemys.cs" />
+    <Compile Include="Assets\Scripts\TimerGame.cs" />
+    <Compile Include="Assets\Scripts\Vida.cs" />
     <Compile Include="Assets\Scripts\Wall.cs" />
     <Compile Include="Assets\Scripts\prueba.cs" />
     <Reference Include="Unity.Timeline.Editor">
