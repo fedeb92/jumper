@@ -27,12 +27,12 @@ public class FinalPlatafform : MonoBehaviour
     {
         if (collision.gameObject.tag.Equals("Player")&& GameObject.Find("GameController").GetComponent<Vida>().coins >= 5)
         {
-            Debug.Log(currentCoins);
+
             PlayerPrefs.SetFloat("vida", currentLife);
 
             PlayerPrefs.SetFloat("moneda", GameObject.Find("GameController").GetComponent<Vida>().coins);
            
-            Debug.Log(currentCoins);
+
             SceneManager.LoadScene("win");
             
             
